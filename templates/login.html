@@ -1,0 +1,23 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Social Media Analyzer</title>
+    <link rel="stylesheet" href="/static/design.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Login</h1>
+        
+        <form method="post" action="/login">
+            <input type="text" name="username" placeholder="👤 Username" required><br>
+            <input type="password" name="password" placeholder="🔑 Password" required><br>
+            <button type="submit">Login 🚀</button>
+        </form>
+        <p>Don’t have an account? 
+            <a href="/signup">Sign Up ✨</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #dfe9f3 0%, #a1c4fd 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  background: #ff5f6d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ff2e44;
+}
+
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #2d3a70;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  transition: border 0.2s;
+}
+
+textarea:focus {
+  border: 2px solid #2575fc;
+}
+
+/* Upload input */
+input[type="file"] {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Analyze Button */
+button {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4e0fa9, #1c5dd4);
+}
+
+/* Results Grid */
+.results-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sentiment-box {
+  flex: 1;
+  text-align: center;
+}
+
+.details-box {
+  flex: 2;
+}
+
+.details-box h3 {
+  margin-top: 15px;
+  color: #2d3a70;
+}
+
+#emojiResult {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+#sentimentText {
+  font-size: 16px;
+  color: #555;
+}
+
+#keywords, #hashtags {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+#tips li {
+  margin: 6px 0;
+  font-size: 14px;
+}

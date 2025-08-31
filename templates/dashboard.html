@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Analyzer</title>
+  <!-- CSS File -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🌐 Social Media Analyzer</h1>
+    <a href="/logout" class="logout-btn">🔓 Logout</a>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Post Analyzer -->
+    <section class="card">
+      <h2>✍️ Analyze Your Post</h2>
+      <textarea id="content" rows="5" placeholder="Type your caption here..."></textarea>
+      <p id="counter">0 words | 0 characters</p>
+      
+      <h3>📂 Or Upload PDF</h3>
+      <input type="file" id="pdfFile" accept="application/pdf">
+
+      <button id="analyze">🚀 Analyze</button>
+    </section>
+
+    <!-- Results Section -->
+    <section class="card">
+      <h2>🔎 Results</h2>
+      <div class="results-grid">
+        
+        <!-- Sentiment -->
+        <div class="sentiment-box">
+          <canvas id="sentimentGauge" width="200" height="200"></canvas>
+          <div id="emojiResult">🤔</div>
+          <p id="sentimentText">Sentiment score will appear here...</p>
+        </div>
+
+        <!-- Details -->
+        <div class="details-box">
+          <h3>📌 Extracted Keywords</h3>
+          <p id="keywords">—</p>
+
+          <h3>🏷 Suggested Hashtags</h3>
+          <p id="hashtags">—</p>
+
+          <h3>💡 Improvement Tips</h3>
+          <ul id="tips">
+            <li>—</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chart.js & Script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script> <!-- CORRECTED: 'script.js' -->
+</body>
+</html>
